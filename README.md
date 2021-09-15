@@ -42,6 +42,10 @@ $db     = new Db;
 $select = $db->setDb('other')->table('表名')->select();
 ```
 
+
+### 测试
+哈哈哈
+
 ## where
  :star2:  
 ### 数组条件 普通查询
@@ -238,8 +242,6 @@ Hybrid A star with reeds-shepp curve
     + 包括(current_point, f, g, h, father, path)
         * current_point: 当前点所处位置
 
-### 测试
-哈哈哈
 
 ### 测试
 嘿嘿嘿
