@@ -238,6 +238,42 @@ Hybrid A star with reeds-shepp curve
 - End point(x_e, y_e, theta_e)
 
 #### 计算
+
+# hybrid_a
+
+Hybrid A star with reeds-shepp curve
+
+## 算法流程
+
+#### 输入
+- Region of Interest(可行驶区域)
+- Obstacles
+- Start point(x_s, y_s, theta_s)
+- End point(x_e, y_e, theta_e)
+
+#### 计算
+- 将初始位置放入open_list中
+    + 包括(current_point, f, g, h, father, path)
+        * current_point: 当前点所处位置
+        * f: 当前点对应的最终代价的值
+        * g: 从起点到当前点实际走过的代价
+        * h: 预计从当前点到终点所需要的代价(由[A_Star](#A_Star)算法计算)
+        * father: 当前点的父节点
+        * path: 从父节点到当前点的轨迹
+- 循环到open_list空
+    + 将代价f最小的找出，移至close_list中，并将这一点作为当前点
+    + 以当前点作为起点计算出最短的reeds-shepp曲线
+    + 如果当前reeds_shepp曲线是一条无碰撞的曲线，则退出循环
+    + 生成基于reeds-shepp的node
+
+    
+    + 对于每一个node
+        * 求出到达node的轨迹
+        * 如果轨迹中的点映射车辆信息会碰撞，跳过本node
+        * 如果该node不在open_list中且node对应的代价g更低，则更新open_list
+        
+### A_Star
+- l
 - 将初始位置放入open_list中
     + 包括(current_point, f, g, h, father, path)
         * current_point: 当前点所处位置
