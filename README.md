@@ -12,6 +12,7 @@
 * [count查询行数](#count)
 * [query执行原生语句](#query)
 * [onlySql只输出sql语句](#onlysql)
+* [j](#计算)
 
 ## 获取Db类文件 
  :star2: 
@@ -218,3 +219,20 @@ if($a !== false){
     echo 'success';
 }
 ```
+
+# hybrid_a
+
+Hybrid A star with reeds-shepp curve
+
+## 算法流程
+
+#### 输入
+- Region of Interest(可行驶区域)
+- Obstacles
+- Start point(x_s, y_s, theta_s)
+- End point(x_e, y_e, theta_e)
+
+#### 计算
+- 将初始位置放入open_list中
+    + 包括(current_point, f, g, h, father, path)
+        * current_point: 当前点所处位置
