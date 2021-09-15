@@ -1,6 +1,6 @@
 ## Db封装类使用手册(一定要打包下载 不要从页面预览复制粘贴 会缺失代码)
 * [where条件](#where)
-* [field](#field)
+[field](#field)
 * [order](#order)
 * [limit](#limit)
 * [leftJoin](#leftjoin)
